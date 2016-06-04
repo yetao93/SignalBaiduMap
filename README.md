@@ -1,0 +1,2 @@
+#在百度地图上显示信息
+可以作为百度地图JavaScript API的练手项目，也是Eclipse项目，clone到本地后导入Eclipse中，部署到服务器上即可运行。

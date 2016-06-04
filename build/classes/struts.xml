@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<package name="yetaotao" extends="json-default">
+		
+		<action name="find" class="com.fwq.action.FuwuquAction" method="find">
+			<result name="success" type="json">
+                <!-- 此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                      注意：root为固定写法，否则不会把result的值返回给客户端 -->
+                <param name="root">fuwuqus</param>
+            </result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+	</package>
+</struts>
